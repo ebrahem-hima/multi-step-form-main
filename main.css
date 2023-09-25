@@ -1,0 +1,465 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(245, 245, 245);
+}
+:root {
+    /* Background */
+
+    /* Next Step */
+    --button-background-color: hsl(213, 96%, 18%);
+    /* confirm checkbox Total */
+    --confirm-background-color: hsl(243, 100%, 62%);
+    --step-color: hsl(228, 100%, 84%);
+    /* background-color a */
+    --link-background-color: hsl(206, 94%, 87%);
+
+    /* Color */
+    /* red */
+    --red-color: hsl(354, 84%, 57%);
+    --gray-color: hsl(354, 53%, 82%);
+    --Lightgray-color: hsl(354, 53%, 82%);
+    --p-info-color: hsl(217, 100%, 97%);
+    --Alabaster-color: hsl(231, 100%, 99%);
+    --White-color: hsl(0, 0%, 100%);
+}
+
+
+/* Start nav */
+nav {
+    background-image: url(./assets/images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    min-width: 250px;
+    height: 95vh;
+    background-size: cover;
+    margin-right: 100px;
+    border-radius: 10px;
+    margin: 16px;
+    font-weight: 600;
+}
+
+.step {
+    color: var(--White-color);
+    opacity: .5;
+    text-transform: uppercase;
+}
+.plan {
+    text-transform: uppercase;
+    color: var(--White-color);
+    font-size: 13px;
+    font-weight: 600;
+}
+nav a:not(.back) {
+    text-decoration: none;
+    color: var(--White-color);
+    color: white;
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--link-background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+nav a:not(.back):hover  {
+    color: black;
+    background-color: var(--link-background-color);
+    transition: .3s;
+}
+nav a:not(.back).active {
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--link-background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    color: black;
+    border: none;
+}
+/* End nav */
+
+/* Start Step 1 */
+.content,
+.select,
+.pick,
+.finishing,
+#thank {
+    height: 95vh;
+    background-color: white;
+    border-radius: 10px;
+    width: 900px;
+    margin: auto 0;
+}
+.content-input,
+.select-plan,
+.pick-content,
+.finishing-content {
+    padding-left: 80px;
+}
+.content-input,
+.pick-content {
+    width: 532px;
+}
+h1 {
+    color: var(--button-background-color);
+    font-weight: 700;
+}
+.content input::placeholder {
+    opacity: .7;
+}
+
+/* End Step 1 */
+
+.requiredname,
+.requiredemail,
+.requirednumber {
+    display: none;
+    position: absolute;
+    right: 0;
+    color: red;
+    top: 0;
+}
+.help,
+.helpnum {
+    color: green;
+    font-weight: 600;
+    display: none;
+}
+.helpchoose {
+    color: red;
+    font-weight: 600;
+    display: none;
+}
+
+/*  */
+
+/* Start Step 2 */
+.boxs:not(:last-child) div {
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+.click {
+    padding: 1rem;
+    border-radius: 6px;
+    margin-right: 1rem;
+    border: 1px solid var(--confirm-background-color);
+}
+.toggle-switch {
+    background-color: var(--button-background-color);
+    width: 45px;
+    height: 22px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.toggle-switch::before {
+    /* font-family: --fa-style-family-classic; */
+    content: "";
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    top: 3.44px;
+    left: 3px;
+    transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: var(--button-background-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+    content: "";
+    left: 27px;
+    color: var(--button-background-color);
+    height: 15px;
+}
+.choose-name {
+    color: var(--button-background-color);
+}
+.content .next,
+.select .next,
+.pick .next,
+.finishing .next {
+    position: absolute;
+    margin: 100px 0;
+    right: 0;
+    bottom: -70px;
+    background-color: var(--button-background-color);
+    color: white;
+    padding: 8px 20px;
+}
+.select .back,
+.pick .back,
+.finishing .back {
+    position: absolute;
+    text-decoration: none;
+    left: 80px;
+    bottom: 30px;
+    background: none;
+    font-weight: 600;
+    color: var(--button-background-color);;
+}
+.back {
+    color: #777 !important;
+}
+.choose-price,
+.dollar,
+.clash {
+    color: #999;
+}
+
+/* End Step 2 */
+
+/* Start Step3 */
+.pick .box input {
+    width: 18px;
+    height: 18px;
+}
+.pick .box p:not(.plan) {
+    color: var(--button-background-color);
+    font-weight: 600;
+}
+.pick .box .span:not(.price) {
+    color: var(--confirm-background-color) !important;
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+    word-spacing: -4px;
+}
+.span2 {
+    color: var(--confirm-background-color) !important;
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+    word-spacing: -4px;
+}
+
+.pick-content .box {
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+.pick-content .box .check:checked {
+    accent-color: var(--confirm-background-color);
+}
+.checkedDiv {
+    border: 2px solid var(--confirm-background-color) !important;
+    border-radius: 6px;
+}
+.free {
+    display: none !important;
+    font-weight: 600;
+    color: var(--button-background-color); 
+}
+/* End Step3 */
+
+/* Start Step4 */
+
+.finishing .arcade {
+    position: relative;
+}
+.finishing .arcade::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #cccccc7e;
+}
+.finishing .arcade p {
+    font-weight: 630;
+    color: var(--button-background-color);
+}
+.finishing .arcade a {
+    cursor: pointer;
+}
+.finishing .arcade .price {
+    font-weight: 650;
+}
+.finishing .box p:not(.arcade p) {
+    color: #999;
+}
+.finishing .box .price:not(.arcade) {
+    font-weight: 500;
+}
+.finishing .total .price-total {
+    color: var(--confirm-background-color);
+    font-weight: 700;
+}
+.pickchoose-price {
+    word-spacing: -4px;
+}
+
+.finishing .next {
+    position: absolute;
+    margin: 100px 0;
+    right: 0;
+    bottom: -70px;
+    background-color: var(--confirm-background-color);
+    color: white;
+    padding: 8px 21px;
+}
+/* End Step4 */
+
+/* Start Step5 */
+
+.position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.headthank {
+    margin: 15px auto;
+}
+#thank img {
+    width: 60px;
+    margin: 0 auto;
+}
+.divthank {
+margin: 0 auto;
+color: #999;
+width: 430px;
+}
+
+/* End Step5 */
+
+
+@media (max-width: 826px) {
+    body {
+        background: none;
+    }
+    .site {
+        flex-direction: column;
+    }
+    .content,
+    .select,
+    .pick,
+    .finishing,
+    #thank {
+        flex-direction: column;
+        height: 100vh;
+        width: 100% !important;
+    }
+    nav{
+        width: 100%;
+        height: 200px;
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: 50% 85.5%;
+        margin-top: -50px !important;
+        margin-left: 0 !important;
+    }
+    .pick,
+    .content,
+    .select,
+    .finishing,
+    #thank {
+        background-color: white;
+        width: calc(100% - 30px);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+    .content-input {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+    .content-input,
+    .select-plan,
+    .pick-content,
+    .finishing-content,
+    #thank {
+        background-color: #ffffff;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.13);
+        padding: 20px;
+        border-radius: 10px;
+        width: calc(100% - 30px);
+        margin: auto;
+        margin-top: -70px !important;
+    }
+    .position {
+        top: 25%;
+    }
+    .position .divthank {
+        width: 254px;
+    }
+    .boxs {
+        display: flex;
+        flex-direction: column;
+    }
+    .boxs div {
+        width: 100% !important;
+        display: flex;
+        margin-bottom: 10px;
+        padding: 10px 10px !important;
+    }
+    .boxs img {
+        margin-bottom: 0 !important;
+        margin-right: 15px;
+    }
+    .span2 {
+        margin-right: 5px;
+    }
+    nav .box div {
+        display: none;
+    }
+    nav .box:not(:last-child) {
+        margin-right: -30px;
+    }
+    nav .box:first-child {
+        padding: 0 !important;
+    }
+    .box:not(:last-child) li {
+        margin-right: -10px !important;
+    }
+    .pick .info-box {
+        margin-left: -8px;
+    }
+    .toggle {
+        margin: 30px 0 !important;
+    }
+    .content .inputs div {
+        margin-top: 10px !important;
+    }
+    .content .next {
+        right: 0;
+        bottom: -377px;
+    }
+    .select .next {
+        right: 0;
+        bottom: -213px;
+    }
+    .select .back {
+        bottom: -107px;
+        left: 0;
+        color: #777 !important;
+    }
+    .pick .next {
+        bottom: -299px;
+    }
+    .pick .back {
+        bottom: -193px;
+        left: 0;
+    }
+    .finishing .next {
+        bottom: -310px;
+    }
+    .finishing .back {
+        bottom: -200px;
+        left: 0;
+    }
+}
+
+/* End Responsive design */

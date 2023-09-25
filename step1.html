@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="all.min.css">
+  <link rel="stylesheet" href="bootstrap-icons-1.10.5/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="site d-flex">
+    <nav class="">
+      <div class="box d-flex align-items-center pt-4">
+        <ul class="">
+            <a class="active me-3 step-one">1</a>
+        </ul>
+          <div>
+            <div class="step">Step 1</div>
+            <p class="plan">Your info</p>
+          </div>
+      </div>
+      <div class="box d-flex align-items-center">
+        <ul class="">
+            <a class="me-3 steptwo-select">2</a>
+        </ul>
+          <div>
+            <div class="step">Step 2</div>
+            <p class="plan">Select plan</p>
+          </div>
+      </div>
+      <div class="box d-flex align-items-center">
+        <ul class="">
+            <a class="me-3 stepthree-pick">3</a>
+        </ul>
+          <div>
+            <div class="step">Step 3</div>
+            <p class="plan">Add-ons</p>
+          </div>
+      </div>
+      <div class="box d-flex align-items-center">
+        <ul class="">
+            <a class="me-3 stepfour-finish">4</a>
+        </ul>
+          <div>
+            <div class="step">Step 4</div>
+            <p class="plan">Summary</p>
+          </div>
+      </div>
+    </nav>
+    <div class="d-flex content position-relative" id="content">
+      <div class="mt-5 content-input position-relative">
+            <h1>Personal info</h1>
+            <p style="color: #999;">
+              Please provide your name, email address, and phone number.
+            </p>
+            <div class="inputs">
+              <div class="position-relative">
+                <label for="" class="mb-1 requiredname">This field is required</label>
+                <label for="" class="mb-1">Name</label>
+                <input class="form-control input-text" type="text" placeholder="e.g.Stephen King">
+              </div>
+              <div class="mt-4 position-relative">
+                <label for="" class="mb-1">Email Address</label>
+                <label for="" class="mb-1 requiredemail">This field is required</label>
+                <input class="form-control input-email" type="email" placeholder="e.g.StephenKing@lorem.com">
+                <label for="" class="mb-1 help">You Should write email like this: Something@(gmail Or lorem).com</label>
+              </div>
+              <div class="mt-4 position-relative">
+                <label for="" class="mb-1">Phone Number</label>
+                <label for="" class="mb-1 requirednumber">This field is required</label>
+                <input class="form-control input-number" type="number" inputmode="numeric" placeholder="e.g. +1 234 567 890">
+                <label for="" class="mb-1 helpnum">You Should to write email like this: 01222222222</label>
+              </div>
+            </div>
+            <a href="" class="btn next">Next Step</a>
+      </div>
+    </div>
+    <div class="select d-flex" id="select">
+      <div class="mt-5 select-plan position-relative">
+          <h1>Select your plan</h1>
+          <p style="color: #999;">
+              You have the option of monthly or yearly billing.
+          </p>
+          <div class="helpchoose">You Should choose one of the following</div>
+          <div class="plans d-flex flex-column">
+              <span class="d-flex boxs">
+                  <div class="choose rounded p-3 me-3" style="width: 140px;">
+                      <img class="mb-5" src="./assets/images/icon-arcade.svg" alt="">
+                      <span>
+                        <p class="mb-0 fw-bold choose-name">Arcade</p>
+                          <span class="span">
+                            <span class="dollar" style="margin-right: -5px;">$</span>
+                            <span class="choose-price">9</span>
+                            <span class="clash" style="margin-left: -4.5px;">/mo</span>
+                          </span>
+                          <span class="d-block free">2 months free</span>
+                        </span>
+                  </div>
+                  <div class="choose rounded p-3 me-3" style="width: 140px;">
+                      <img class="mb-5" src="./assets/images/icon-advanced.svg" alt="">
+                      <span>
+                          <p class="mb-0 fw-bold choose-name">Advanced</p>
+                          <span class="span">
+                            <span class="dollar" style="margin-right: -5px;">$</span>
+                            <span class="choose-price">12</span>
+                            <span class="clash" style="margin-left: -4.5px;">/mo</span>
+                          </span>
+                          <span class="d-block free">2 months free</span>
+                      </span>
+                  </div>
+                  <div class="choose rounded p-3" style="width: 140px;">
+                      <img class="mb-5" src="./assets/images/icon-pro.svg" alt="">
+                      <span>
+                        <p class="mb-0 fw-bold choose-name">Pro</p>
+                          <span class="span">
+                            <span class="dollar" style="margin-right: -5px;">$</span>
+                            <span class="choose-price">15</span>
+                            <span class="clash" style="margin-left: -4.5px;">/mo</span>
+                          </span>
+                          <span class="d-block free">2 months free</span>
+                      </span>
+                  </div>
+              </span>
+              <span class="toggle text-center mt-5 d-flex align-items-center justify-content-center gap-4">
+                  <span class="fw-bold">Monthly</span>
+                  <!-- <span class="d-flex align-items-center"> -->
+                      <label class="">
+                          <input class="toggle-checkbox" type="checkbox" style="display: none;"/>
+                          <div class="toggle-switch"></div>
+                      </label>
+                  <!-- </span> -->
+                  <span class="fw-bold" style="color: #999;">Yearly</span>
+              </span>
+          </div>
+          <div class="d-flex align-items-center">
+              <button class="btn next nextTwo">Next Step</button>
+              <a class="back backone" style="color: black;">Go Back</a>
+          </div>
+      </div>
+  </div>
+  <div class="pick position-relative d-flex" id="pick">
+    <div class="pick-content mt-5 position-relative">
+      <div class="d-flex flex-column">
+          <h1>Pick add-ons</h1>
+          <p style="color: #999;margin-bottom: 30px;">
+              Add-ons help enhance your gaming experience
+          </p>
+          <div class="box d-flex align-items-center p-3 mb-4">
+              <input class="me-4 check" type="checkbox" name="" id="">
+              <div class="info-box">
+                <p class="mb-0 pick-name">Online service</p>
+                <span style="color: #999999ab;">Access to multiplayer games</span>
+              </div>
+              <span class="span2">
+                <span class="dollar2" style="color: var(--confirm-background-color);">$</span>
+                <span class="price pick-price">1</span>
+                <span class="clash2" style="color: var(--confirm-background-color);">/mo</span>
+              </span>
+          </div>
+          <div class="box d-flex align-items-center p-3 mb-4">
+              <input class="me-4 check" type="checkbox" name="" id="">
+              <div class="info-box">
+                  <p class="mb-0 pick-name">Larger storage</p>
+                  <span style="color: #999999ab;">Extra 1TB of cloud save</span>
+              </div>
+              <span class="span2">
+                <span class="dollar2" style="color: var(--confirm-background-color);">$</span>
+                <span class="price pick-price">2</span>
+                <span class="clash2" style="color: var(--confirm-background-color);">/mo</span>
+              </span>
+          </div>
+          <div class="box d-flex align-items-center p-3">
+              <input class="me-4 check" type="checkbox" name="" id="">
+              <div class="info-box">
+                  <p class="mb-0 pick-name">Customizable profile</p>
+                  <span style="color: #999999ab; font-size: 15px;">Custom theme on your profile</span>
+              </div>
+              <span class="span2">
+                <span class="dollar2" style="color: var(--confirm-background-color);">$</span>
+                <span class="price pick-price">2</span>
+                <span class="clash2" style="color: var(--confirm-background-color);">/mo</span>
+              </span>
+          </div>
+      </div>
+      <div class="links-pick d-flex align-items-center">
+        <a class="back backtwo" style="color: black;">Go Back</a>
+        <button class="btn next nextThree">Next Step</button>
+      </div>
+    </div>
+  </div>
+  <div class="finishing position-relative d-flex" id="finish">
+    <div class="finishing-content mt-5 position-relative">
+      <div class="d-flex flex-column">
+        <h1>Finishing up</h1>
+        <p style="color: #999; margin-bottom: 30px">
+          Double-check everything looks OK before confirming
+        </p>
+        <div
+          class="box arcade d-flex align-items-center justify-content-between p-3 mb-4"
+        >
+          <div class="info-box">
+            <p class="mb-0">
+              <span class="finish-name"></span>
+              (<span class="timeofarcade">Monthly</span>)
+            </p>
+            <a style="color: #999999ab" class="change">Change</a>
+          </div>
+          <div class="price getchoose-price"></div>
+        </div>
+        <div class="step2">
+          <!-- <div
+            class="box d-flex align-items-center justify-content-between p-3 pb-1"
+          >
+            <div class="info-box">
+              <p class="mb-0 pickchoose-name"></p>
+            </div>
+            <div class="price pickchoose-price"></div>
+          </div> -->
+          <!-- <div
+            class="box d-flex align-items-center justify-content-between p-3 mb-4"
+          >
+            <div class="info-box">
+              <p class="mb-0">Larger Storage</p>
+            </div>
+            <div class="price">+$30/yr</div>
+          </div> -->
+        </div>
+        <div
+          class="box total d-flex align-items-center justify-content-between p-3"
+        >
+          <div class="info-box">
+            <p class="mb-0">Total(per <span class="time">year</span>)</p>
+          </div>
+          <div class="price-total"></div>
+        </div>
+      </div>
+      <div class="links-pick d-flex align-items-center">
+        <a class="back backthree" style="color: black">Go Back</a>
+        <button class="btn next nextFour">Confirm</button>
+      </div>
+    </div>
+  </div>
+  <div class="thank position-relative d-flex text-center flex-column" id="thank">
+    <div class="position">
+      <img src="./assets/images/icon-thank-you.svg" alt="">
+    <h1 class="headthank">Thank you!</h1>
+    <div class="divthank">
+      Thanks for confirming your subscription! We hope you have fun 
+      using our platform. If you ever need support, please feel free 
+      to email us at support@loremgaming.com.
+    </div>
+    </div>
+  </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
